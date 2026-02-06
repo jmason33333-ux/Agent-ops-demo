@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ticket_001",
+    "from_email": "tom.brennan@swiftlogistics.com",
+    "subject": "Question about my latest invoice",
+    "body": "Hi there, I just noticed a charge on my latest invoice that I don't recognize. It says 'API overage — $12.50' but I don't think I've used the API at all this month. Could you help me understand what this charge is for? Thanks!",
+    "received_at": "2025-01-20T09:15:00Z"
+  },
+  {
+    "id": "ticket_002",
+    "from_email": "brian.foster@elementforge.com",
+    "subject": "Webhook events not firing for custom object updates",
+    "body": "I've configured webhooks to listen for 'object.updated' events on our custom data objects, but the callbacks aren't being triggered. Standard object events (users, projects) work fine. I've checked the webhook logs and there's no record of any delivery attempts for custom object events. Is this a known limitation or am I missing a configuration step? Running against API v3.2.",
+    "received_at": "2025-01-20T10:32:00Z"
+  },
+  {
+    "id": "ticket_003",
+    "from_email": "raj.patel@cumulusdata.com",
+    "subject": "ANOTHER billing error — this is the third time",
+    "body": "I'm extremely frustrated. For the third month in a row, I've been double-charged for my Pro subscription. I was told last time this was resolved permanently. I need this fixed immediately and I want a full refund for all three months of overcharges. If this isn't handled properly I'll be canceling our account and moving to a competitor.",
+    "received_at": "2025-01-20T11:45:00Z"
+  },
+  {
+    "id": "ticket_004",
+    "from_email": "sarah.chen@meridiantech.com",
+    "subject": "CRITICAL: Platform completely down for our entire org",
+    "body": "Our entire organization of 200+ users cannot access the platform as of 30 minutes ago. We're getting 503 errors across all endpoints — web app, API, everything. This is blocking multiple production deployments and costing us significant revenue. We need immediate resolution. Our SLA guarantees a 15-minute response for critical issues.",
+    "received_at": "2025-01-20T14:02:00Z"
+  },
+  {
+    "id": "ticket_005",
+    "from_email": "kevin.o'brien@founderstack.com",
+    "subject": "Quick question about your product",
+    "body": "Hey, I just signed up and I'm trying to figure out how to best use your platform for my startup. We're a team of 5 and we need something for project tracking and client communication. Is this the right tool for that? Also, do you have any startup-specific plans or discounts?",
+    "received_at": "2025-01-20T15:20:00Z"
+  }
+]

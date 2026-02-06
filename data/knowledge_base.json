@@ -1,0 +1,146 @@
+[
+  {
+    "id": "kb_001",
+    "title": "Understanding Your Invoice and Billing Cycle",
+    "category": "billing",
+    "keywords": ["invoice", "billing", "charge", "payment", "cycle", "monthly", "annual"],
+    "content": "Your invoice is generated on the first of each month and reflects usage from the previous billing cycle. You can view and download invoices from Settings > Billing > Invoice History.\n\nIf you see unexpected charges, check your usage dashboard first — overages on API calls or storage are the most common cause. Each plan includes a base allocation, and usage beyond that is billed at the per-unit rate shown on your plan details page.\n\nFor annual plans, the full amount is charged at the start of each billing year. If you upgrade mid-cycle, you'll receive a prorated credit for the unused portion of your current plan.",
+    "last_updated": "2025-01-10"
+  },
+  {
+    "id": "kb_002",
+    "title": "How to Update Your Payment Method",
+    "category": "billing",
+    "keywords": ["payment", "credit card", "update", "payment method", "card", "bank"],
+    "content": "To update your payment method, go to Settings > Billing > Payment Methods. Click 'Add Payment Method' to add a new card or bank account, then set it as your default.\n\nWe accept all major credit cards (Visa, Mastercard, American Express) and ACH bank transfers for annual plans. Payment method changes take effect immediately and will be used for your next billing cycle.\n\nIf your payment fails, we'll retry three times over 7 days and send email notifications. After three failed attempts, your account will be moved to a restricted state. Contact support immediately if you're having payment issues to avoid service interruption.",
+    "last_updated": "2025-01-15"
+  },
+  {
+    "id": "kb_003",
+    "title": "Changing or Upgrading Your Plan",
+    "category": "billing",
+    "keywords": ["upgrade", "downgrade", "plan", "change plan", "switch", "tier"],
+    "content": "You can change your plan at any time from Settings > Billing > Plan Details. Upgrades take effect immediately — you'll be charged a prorated amount for the remainder of your current billing cycle.\n\nDowngrades take effect at the start of your next billing cycle. You'll retain access to all features of your current plan until then. Note that downgrading may result in loss of access to features not included in the lower tier.\n\nIf you're on an annual plan and want to switch, contact our sales team for options. We can typically accommodate mid-cycle changes with prorated adjustments.",
+    "last_updated": "2024-12-20"
+  },
+  {
+    "id": "kb_004",
+    "title": "Resetting Your Password",
+    "category": "account_access",
+    "keywords": ["password", "reset", "forgot", "login", "sign in", "can't log in"],
+    "content": "To reset your password, click 'Forgot Password' on the login page. Enter the email address associated with your account, and we'll send a reset link within 2 minutes.\n\nThe reset link expires after 1 hour for security. If you don't receive the email, check your spam folder and verify you're using the correct email address. You can also try adding no-reply@ourapp.com to your contacts.\n\nIf you still can't reset your password, contact support with your account email and we'll verify your identity and assist with manual reset. For security, we may ask you to confirm recent account activity.",
+    "last_updated": "2025-01-05"
+  },
+  {
+    "id": "kb_005",
+    "title": "Two-Factor Authentication (2FA) Setup and Recovery",
+    "category": "account_access",
+    "keywords": ["2fa", "two-factor", "authentication", "authenticator", "recovery", "backup codes", "mfa"],
+    "content": "Two-factor authentication adds an extra layer of security to your account. To enable it, go to Settings > Security > Two-Factor Authentication. We support authenticator apps (Google Authenticator, Authy) and SMS-based verification.\n\nWhen you set up 2FA, you'll receive 10 backup recovery codes. Store these in a safe place — they're your only way to access your account if you lose your 2FA device. Each code can only be used once.\n\nIf you've lost access to your 2FA device and don't have backup codes, contact support. We'll need to verify your identity through an alternative method, which typically takes 24-48 hours for security review.",
+    "last_updated": "2025-01-08"
+  },
+  {
+    "id": "kb_006",
+    "title": "Account Locked After Failed Login Attempts",
+    "category": "account_access",
+    "keywords": ["locked", "locked out", "too many attempts", "account locked", "suspended", "blocked"],
+    "content": "For security, accounts are temporarily locked after 5 consecutive failed login attempts. The lockout period is 30 minutes, after which you can try again.\n\nIf you believe your account was locked due to unauthorized access attempts, reset your password immediately after the lockout period ends and enable two-factor authentication if you haven't already.\n\nFor enterprise accounts with SSO enabled, lockouts are managed by your organization's identity provider. Contact your IT administrator for SSO-related access issues. If you need immediate access for a critical business need, contact our support team for expedited unlock.",
+    "last_updated": "2024-11-30"
+  },
+  {
+    "id": "kb_007",
+    "title": "API Error Codes and Troubleshooting",
+    "category": "technical",
+    "keywords": ["api", "error", "500", "400", "401", "403", "rate limit", "timeout", "integration"],
+    "content": "Common API errors and their solutions:\n\n- 400 Bad Request: Check your request payload format. Ensure all required fields are present and data types match our API spec.\n- 401 Unauthorized: Your API key may be invalid or expired. Regenerate it from Settings > API > Keys.\n- 403 Forbidden: Your plan may not include API access, or you've hit a permission boundary. Check your plan features.\n- 429 Too Many Requests: You've exceeded the rate limit. Default limits are 100 requests/minute for Pro and 500/minute for Enterprise. Implement exponential backoff in your integration.\n- 500 Internal Server Error: This is on our end. Check our status page at status.ourapp.com. If the issue persists for more than 5 minutes, contact support with your request ID.",
+    "last_updated": "2025-01-12"
+  },
+  {
+    "id": "kb_008",
+    "title": "Webhook Integration Setup Guide",
+    "category": "technical",
+    "keywords": ["webhook", "integration", "setup", "endpoint", "events", "callback"],
+    "content": "Webhooks let you receive real-time notifications when events happen in your account. To set up webhooks, go to Settings > Integrations > Webhooks.\n\nProvide your endpoint URL (must be HTTPS) and select the events you want to subscribe to. We'll send a verification request to confirm your endpoint is reachable. Your endpoint must respond with a 200 status within 5 seconds.\n\nIf a webhook delivery fails, we retry with exponential backoff: 1 minute, 5 minutes, 30 minutes, 2 hours, then every 6 hours for 3 days. You can monitor delivery status and view payloads in the webhook logs. For high-volume accounts, consider using a message queue to process webhooks asynchronously.",
+    "last_updated": "2025-01-03"
+  },
+  {
+    "id": "kb_009",
+    "title": "Performance Issues and Slow Loading",
+    "category": "technical",
+    "keywords": ["slow", "performance", "loading", "timeout", "lag", "speed", "latency"],
+    "content": "If you're experiencing slow performance, try these steps in order:\n\n1. Clear your browser cache and cookies for our domain.\n2. Try an incognito/private browsing window to rule out extension conflicts.\n3. Check our status page at status.ourapp.com for any ongoing incidents.\n4. Test on a different network to rule out local connectivity issues.\n\nFor API performance issues specifically, check if you're making requests to the correct regional endpoint. Using the endpoint closest to your servers significantly reduces latency. Available regions: us-east, us-west, eu-central, ap-southeast.\n\nIf performance issues persist after these steps, contact support with your browser version, network speed test results, and the approximate time the issue started. Including HAR file exports from your browser's developer tools is extremely helpful for our engineering team to diagnose the issue.",
+    "last_updated": "2024-12-15"
+  },
+  {
+    "id": "kb_010",
+    "title": "Order Tracking and Shipping Status",
+    "category": "shipping",
+    "keywords": ["tracking", "shipping", "order", "delivery", "status", "where is my order"],
+    "content": "You can track your order status from your account dashboard under Orders > Order History. Click on any order to see detailed tracking information including the carrier, tracking number, and estimated delivery date.\n\nStandard shipping typically takes 5-7 business days within the US and 10-15 business days internationally. Expedited shipping (2-3 business days) is available at checkout for an additional fee.\n\nTracking numbers are generated within 24 hours of order placement and may take an additional 24 hours to show movement in the carrier's system. If your tracking hasn't updated in 48 hours, contact our support team with your order number.",
+    "last_updated": "2025-01-08"
+  },
+  {
+    "id": "kb_011",
+    "title": "Shipping Delays and Lost Packages",
+    "category": "shipping",
+    "keywords": ["delay", "delayed", "lost", "missing", "late", "not received", "package"],
+    "content": "If your package is delayed beyond the estimated delivery date, first check the tracking information for any carrier updates or delivery exceptions.\n\nCommon causes of delays include: weather events, customs processing (international orders), incorrect address on file, and carrier volume surges during peak seasons. Most delayed packages arrive within 2-3 business days of the original estimate.\n\nIf your package shows as delivered but you haven't received it, check with neighbors and any secure locations where the carrier may have left it. If it's been more than 48 hours since the 'delivered' status, contact us and we'll file a claim with the carrier. For orders over $100, we offer free replacement or refund once the carrier investigation is complete (typically 5-7 business days).",
+    "last_updated": "2025-01-11"
+  },
+  {
+    "id": "kb_012",
+    "title": "International Shipping and Customs",
+    "category": "shipping",
+    "keywords": ["international", "customs", "duties", "import", "global", "overseas", "tax"],
+    "content": "We ship to over 50 countries worldwide. International orders are shipped via DHL Express or FedEx International, with typical delivery times of 7-15 business days depending on destination.\n\nImport duties, taxes, and customs fees are the responsibility of the recipient and are not included in our shipping charges. These fees vary by country and are determined by your local customs authority. We include accurate customs declarations on all shipments.\n\nSome countries may have restrictions on certain product categories. If your order is held by customs, you'll typically receive notification from the carrier with instructions. Contact our support team if you need documentation to assist with customs clearance.",
+    "last_updated": "2024-12-28"
+  },
+  {
+    "id": "kb_013",
+    "title": "Refund Policy Overview",
+    "category": "refund",
+    "keywords": ["refund", "return", "money back", "cancel", "cancellation", "policy"],
+    "content": "We offer a 30-day money-back guarantee on all plans. If you're not satisfied, request a refund within 30 days of your purchase and we'll process it in full — no questions asked.\n\nFor monthly subscriptions, refunds apply to the current billing period only. For annual subscriptions, we offer a prorated refund based on the unused portion of your subscription term.\n\nRefund requests can be submitted through Settings > Billing > Request Refund, or by contacting our support team. We aim to process all refund requests within 2 business days. Once approved, the refund will appear on your statement within 5-10 business days depending on your payment provider.",
+    "last_updated": "2025-01-06"
+  },
+  {
+    "id": "kb_014",
+    "title": "Refund Processing Times and Status",
+    "category": "refund",
+    "keywords": ["refund status", "processing", "when", "how long", "pending", "timeline"],
+    "content": "Once a refund is approved, here's the typical processing timeline:\n\n- Credit card refunds: 5-10 business days to appear on your statement.\n- ACH/bank transfer refunds: 3-5 business days to return to your bank account.\n- If you paid via PayPal, the refund is typically available within 24 hours.\n\nYou'll receive an email confirmation when your refund is processed on our end. If you don't see the refund after the expected timeframe, contact your bank first — sometimes refunds appear as a credit rather than a reversal of the original charge.\n\nFor partial refunds (e.g., prorated annual plan cancellations), the exact amount will be calculated and shown before you confirm the refund request.",
+    "last_updated": "2024-12-22"
+  },
+  {
+    "id": "kb_015",
+    "title": "Requesting a Partial Refund or Credit",
+    "category": "refund",
+    "keywords": ["partial", "credit", "adjustment", "prorate", "service credit", "discount"],
+    "content": "If you experienced a service disruption or are dissatisfied with a specific aspect of our service, you may be eligible for a partial refund or account credit.\n\nService credits are automatically applied for documented outages exceeding our SLA commitments (99.9% uptime for Pro, 99.99% for Enterprise). Check your SLA dashboard under Settings > Account > SLA Status.\n\nFor other credit requests, contact our support team with details about the issue. Our team has the authority to issue credits up to one month's subscription value. Larger adjustments require manager approval and will be handled within 1 business day.\n\nCredits are applied to your account balance and automatically deducted from your next invoice.",
+    "last_updated": "2025-01-02"
+  },
+  {
+    "id": "kb_016",
+    "title": "Getting Started: Quick Setup Guide",
+    "category": "general_inquiry",
+    "keywords": ["getting started", "setup", "new", "onboarding", "first steps", "how to"],
+    "content": "Welcome! Here's how to get up and running quickly:\n\n1. Complete your profile in Settings > Profile. Add your company details and timezone.\n2. Invite your team members from Settings > Team > Invite Members.\n3. Set up your first project from the Dashboard by clicking 'New Project'.\n4. Connect your integrations (Slack, GitHub, Jira) from Settings > Integrations.\n\nWe recommend starting with our interactive tutorial — click the '?' icon in the bottom-right corner of any page to launch it. The tutorial walks you through core features in about 10 minutes.\n\nFor Enterprise accounts, your dedicated Customer Success Manager will schedule an onboarding call within 24 hours of signup. Check your email for the calendar invite.",
+    "last_updated": "2025-01-14"
+  },
+  {
+    "id": "kb_017",
+    "title": "Contacting Support and Service Hours",
+    "category": "general_inquiry",
+    "keywords": ["contact", "support", "hours", "help", "phone", "email", "chat", "response time"],
+    "content": "Our support team is available through multiple channels:\n\n- Email: support@ourapp.com — response within 4 hours (business days)\n- Live Chat: Available on our website, Mon-Fri 8am-8pm ET\n- Phone: Enterprise customers can call our dedicated support line 24/7\n\nResponse time SLAs by plan:\n- Free: Best effort, typically within 24 hours\n- Starter: Within 12 hours\n- Pro: Within 4 hours\n- Enterprise: Within 1 hour (critical issues: 15 minutes)\n\nFor the fastest resolution, include your account email, a clear description of the issue, and any relevant screenshots or error messages when contacting support.",
+    "last_updated": "2024-12-18"
+  },
+  {
+    "id": "kb_018",
+    "title": "Data Export and Account Deletion",
+    "category": "general_inquiry",
+    "keywords": ["export", "data", "download", "delete account", "gdpr", "privacy", "close account"],
+    "content": "You can export all your data at any time from Settings > Account > Data Export. We support exports in CSV and JSON formats. For large accounts, the export is prepared asynchronously and you'll receive a download link via email within 1 hour.\n\nTo permanently delete your account, go to Settings > Account > Delete Account. This action is irreversible and will remove all your data, including projects, files, and team settings, within 30 days.\n\nWe comply with GDPR, CCPA, and other data privacy regulations. If you need a certified data deletion confirmation for compliance purposes, contact our privacy team at privacy@ourapp.com after initiating the deletion.\n\nNote: Account deletion will immediately cancel any active subscriptions. Any remaining balance or unused credit will be refunded according to our refund policy.",
+    "last_updated": "2025-01-09"
+  }
+]
